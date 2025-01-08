@@ -16,7 +16,7 @@ COPY config.yaml /app/config.yaml
 
 # Charger les fichiers spécifiés dans config.yaml
 COPY data/application_test.csv /app/data/application_test.csv
-COPY models/artifacts/best_model/model.pkl /app/artifacts/model.pkl
+COPY models/artifacts/best_model/model.pkl /app/models/artifacts/best_model/model.pkl
 
 # Exposer le port par défaut de l'API
 EXPOSE 8000
