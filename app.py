@@ -36,7 +36,7 @@ app = FastAPI()
 
 @app.get("/")
 def read_root():
-    return {"message": "Bienvenue sur l'API de prédiction !"}
+    return {"message": "Bienvenue sur l'API de prédiction ! créée dans le cadre de la formation openclassrooms, Implémentez un modèle de scoring"}
 
 
 @app.get("/get_list_id")
