@@ -39,10 +39,10 @@ Accédez à la documentation interactive Swagger à l'adresse : `bash  http://lo
    URL : GET /
    Description : Retourne un message de bienvenue.
 2. Liste des IDs Clients
-   URL : GET /list_id
+   URL : GET /get_list_id
    Description : Retourne une liste des IDs disponibles dans les données.
 3. Prédiction pour un client
-   URL : GET /predict/{client_id}
+   URL : GET /get_predict/{client_id}
    Description : Effectue une prédiction pour un client spécifique.
    Paramètre requis :
    client_id : Identifiant unique du client (SK_ID_CURR).

@@ -13,7 +13,7 @@ class TestAPI(unittest.TestCase):
         self.assertIn("Bienvenue", response.json()["message"])
 
     def test_list_id(self):
-        response = self.client.get("/list_id")
+        response = self.client.get("/get_list_id")
         self.assertEqual(response.status_code, 200)
         self.assertIn("SK_ID_CURR", response.json())
 
@@ -21,9 +21,10 @@ class TestAPI(unittest.TestCase):
         # Replace 100001 with an actual SK_ID_CURR from your CSV
         response = self.client.get("/get_predict/100001")
         if response.status_code == 200:
-            self.assertIn("SK_ID_CURR", response.json())
+            self.assertIn("prediction", response.json())
         elif response.status_code == 404:
-            self.assertIn("non trouvé", response.json()["detail"])
+            print(response.json())
+            self.assertIn("404", response.json()["detail"])
 
     def test_predict_invalid_client(self):
         # Assuming this ID doesn't exist
