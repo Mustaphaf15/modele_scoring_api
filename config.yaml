@@ -1,0 +1,3 @@
+CSV_FILE: "data/application_test.csv"
+MODEL_FILE: "models/artifacts/best_model/model.pkl"
+OPTIMAL_THRESHOLD: 0.30000000000000004
