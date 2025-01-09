@@ -95,7 +95,7 @@ def predict(client_id: int):
 async def get_client_info(client_id: int):
     try:
         data = pd.read_csv(CSV_FILE)
-        df = create_new_features(df)
+        data = create_new_features(data)
         client_data = data[data["SK_ID_CURR"] == client_id]
         if client_data.empty:
             raise ValueError(
