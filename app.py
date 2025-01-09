@@ -100,6 +100,7 @@ async def get_client_info(client_id: int):
         if client_data.empty:
             raise ValueError(
                 f"Aucune donnée trouvée pour le client ID {client_id}.")
+        client_data = client_data.replace([np.inf, -np.inf], np.nan).fillna("Valeur manquante")
         return client_data.to_dict(orient="records")[0]
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))
