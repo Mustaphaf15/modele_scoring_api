@@ -49,13 +49,13 @@ Accédez à la documentation interactive Swagger à l'adresse : `bash  http://lo
 
 ## Déploiement
 
-Cette API peut être déployée sur des plateformes comme Deta Space, en suivant ces étapes :
+Cette API peut être déployée sur des plateformes Docker, en suivant ces étapes :
 
-Installez l'outil Deta CLI : `bash  curl -fsSL https://get.deta.dev/cli.sh | sh `
+Installez l'outil CLI
 
-Connectez-vous avec votre compte Deta : `bash  deta login `
+Connectez-vous avec votre compte
 
-Déployez le projet : `bash  deta deploy `
+Déployez le projet
 
 ## Structure du Projet
 
